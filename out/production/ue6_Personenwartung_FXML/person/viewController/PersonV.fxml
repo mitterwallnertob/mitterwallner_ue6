@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vBox" xmlns="http://javafx.com/javafx/1.8.271"
+            xmlns:fx="http://javafx.com/fxml/1.0"
+            fx:controller="person.viewController.PersonC"
+            spacing="10" style="-fx-padding: 15 15 15 15;">
+    <GridPane fx:id="gpKey" hgap="5" vgap="5">
+        <Label text="SVNR: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="tfSvnr"/>
+    </GridPane>
+
+    <GridPane fx:id="gpNonKey" hgap="5" vgap="5">
+        <Label text="Nachname: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="tfNname"/>
+
+        <Label text="Vorname: " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="tfVname"/>
+
+        <Label text="Geburtsdatum: " GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="dpGebDat"/>
+
+        <Label text="Größe: " GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" alignment="CENTER_RIGHT" fx:id="tfGroesse"/>
+
+        <Label text="Geschlecht: " GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <ChoiceBox GridPane.columnIndex="1" GridPane.rowIndex="5" fx:id="cbGeschlecht"/>
+    </GridPane>
+    <HBox alignment="CENTER_RIGHT" spacing="5" fx:id="hbButtons">
+        <Button text="Cancel" fx:id="btCancel" onAction="#cancel"/>
+        <Button text="Save" fx:id="btSave" onAction="#save" defaultButton="true"/>
+    </HBox>
+    <TextField fx:id="tfMsg" editable="false"/>
+</VBox>
